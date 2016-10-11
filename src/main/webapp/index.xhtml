@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>Agenda</title>
+</h:head>
+<h:body>
+	<h:form>
+	<p:outputLabel value="Insertar"/>
+	<br></br>
+		<p:inputText value="#{contactoBean.nombre}" placeholder="Nombre"  />
+		<p:inputText value="#{contactoBean.telefono}" placeholder="Teléfono" />
+		<p:commandButton value="Guardar" action="#{contactoBean.crear()}" />
+		<br></br>
+		<p:outputLabel value="Buscar por Id"/>
+		<br></br>
+		<p:inputText value="#{contactoBean.id}" placeholder="Id" />
+		<p:commandButton value="Buscar" action="#{contactoBean.buscarId()}" />
+		
+	    <br></br>
+		<p:outputLabel value="Buscar todos"/>
+		<br></br>
+		<p:commandButton value="Buscar todos" action="#{contactoBean.buscarTodos()}" />
+	</h:form>
+</h:body>
+</html>
